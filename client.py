@@ -1,7 +1,7 @@
 import socket
 
 import threading
-
+ 
 def send_message(server_socket, message):
     # Convert the length of the message to a 4-byte header
     msg_length = len(message).to_bytes(4, 'big')
