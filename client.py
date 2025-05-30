@@ -29,8 +29,7 @@ def handle_client(client_socket):
             message = receive_message(client_socket)
             if not message:
                 break
-            if not message.startswith(name):
-                print(f"\n{message}")
+            print(f"\n{message}")
         except ConnectionResetError:
             break    
 

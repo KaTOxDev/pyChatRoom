@@ -20,8 +20,7 @@ class MessageReceiver(QThread):
                 message = self.receive_message()
                 if not message:
                     break
-                if not message.startswith(self.name):
-                    self.message_received.emit(message)
+                self.message_received.emit(message)
             except:
                 break
     
